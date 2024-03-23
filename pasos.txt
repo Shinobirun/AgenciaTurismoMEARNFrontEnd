@@ -1,0 +1,50 @@
+npm install -D tailwindcss
+npx tailwindcss init
+
+
+tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+
+src/input.css
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+en index.html que está en la carpeta public
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+  <h1 class="text-3xl font-bold underline">
+    Agencia de Turismo
+  </h1>
+</body>
+</html>
+
+
+
+npx tailwindcss -i /input.css -o ./src/output.css --watch
+
+
+Aca para instalar las rutas del proyecto
+
+
+npm install react-router-dom
